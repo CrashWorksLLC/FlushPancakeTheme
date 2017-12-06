@@ -1,0 +1,594 @@
+@import url(//fonts.googleapis.com/css?family=Arimo:400,700);
+
+/*
+	We can set a font here, though this font will not be carried over to the PDF, it's close and
+	honestly, when the client is viewing it online that's when we want to wow them. Once they print it
+	it's going into their records and not hung on the wall...
+
+	It's close enough :D
+*/
+
+* {
+	font-family: 'Arimo', sans-serif!important;
+}
+body {
+	background: #EAEAEA ;
+}
+
+/* We can target the PDF rendering using this class */
+.pdf_mode, .pdf {
+	background: #fff!important;
+}
+
+.invoice-payments #payment-plan-header {
+    border: 0;
+}
+
+.invoice-payments ol {
+    padding-left: 20px;
+}
+
+.detailed-layout #wrapper, .kitchen #wrapper {
+	background: #fff;
+	padding: 0 20px 20px 20px;
+	margin-top:70px;
+        margin-bottom: 20px;
+}
+
+#envelope {
+	padding-top: 20px!important;
+}
+
+
+/* Let's override the header bar */
+
+.detailed-layout #buttonBar, .kitchen #buttonBar {
+	height:50px;
+	width:100%;
+	display:block;
+	text-align:right;
+  	position:fixed;
+    z-index: 4;
+	top:0;
+	left:0;
+	background: #343843 ;
+	color: #fff;
+	font-size: 15px;
+	line-height: 21px;
+
+}
+
+.detailed-layout #buttonHolders, .kitchen #buttonHolders {
+	width:835px;
+	margin:0 auto;
+}
+
+
+
+.detailed-layout #buttonBar a, .kitchen #buttonBar a {
+
+	/* throw some overrides in there */
+
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+
+	/* End resets */
+
+	float:right;
+	margin:10px 0px 0 10px;
+	padding:5px 10px;
+	color:#fff;
+	text-decoration:none;
+
+  background: #656B79;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+
+  color: #fff;
+  line-height: 1;
+  padding: 8px 12px 9px;
+  text-align: center;
+
+}
+
+.detailed-layout #buttonBar a:hover, .detailed-layout #buttonBar .button.active, .kitchen #buttonBar a:hover, .kitchen #buttonBar .button.active {
+
+	border: none!important;
+	box-shadow: none!important;
+	text-shadow: none;
+    background: #D54518;
+
+
+
+
+}
+
+.invoice .paidon {
+	color:#656B79;
+	float:left;
+	margin-left:5px;
+	margin-top:16px;
+}
+
+#buttonHolders .paidon {
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes greenPulse {
+  from {box-shadow: inset 0 0 9px #666; }
+  50% { box-shadow: inset 0 0px 12px #D0FFB0;/*#002c7d; */}
+  to { box-shadow: inset 0 0 9px #666; }
+}
+
+
+th, #content tfoot td.invoice-due-on {
+  color: #000040 !important;
+}
+
+#content table tr.invoice-total { background: rgb(73, 138, 57); font-weight: bolder; }
+#buttonBar #paypal a {
+font-size: 14px !important;
+line-height: 11px;
+background: rgb(73, 138, 57);/*#D0FFB0;*/
+
+ animation-name: greenPulse;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+} 
+
+/* LIGHT LOGO
+#buttonBar img.header-logo{
+  content: url('/LOGOLIGHT.png');
+  vertical-align: middle;
+  padding: 18px 0;
+}
+
+*/
+
+/* END Header bar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adjust the header table stuff */
+
+#envelope td {
+	height:120px;
+}
+
+/* End header table stuff */
+
+/* Company Details */
+#company-info-holder {
+	padding-top: 0;
+	text-align:left;
+	vertical-align:top!important;
+}
+
+#company-info-holder h2.logo {
+	margin: 0px;
+	color: #656B79;
+}
+/* END Company Details */
+
+/* Adjust Invoice details stuff */
+#invoice-details-holder h2 {
+	color: #656B79;
+	font-weight: 700;
+}
+/* END Invoice details stuff */
+
+/* Line Items table */
+#content table thead th {
+    color: #656B79;
+    font-size: 14px;
+}
+
+#content table tr.invoice-desc-row, #content table tr.items-desc-row, p.comment-body {
+	background: #fff;
+    color: #888888!important;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+}
+
+/* Let's drop that image from the line item row */
+#content table tr.invoice-desc-row img, #content table tr.items-desc-row img {
+	display:none;
+}
+
+#content tr td.column_1,
+#content tr td.column_5 {
+    text-indent: 5px;
+ 	color: #888888!important;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#content table tr.border-top td div {
+    border-bottom: 1px solid #E6E6E6;
+    display: block;
+    height: 1px;
+    margin: 0 0 1px;
+}
+#content table tr.border-bottom td div {
+    border-top: none;
+    display: block;
+    height: 1px;
+    margin: 1px 0 0;
+}
+
+#content table tr.invoice-total {
+    background: none repeat scroll 0 0 #656B79;
+}
+
+#content .invoice-item-notes td {
+	padding-top:0;
+}
+
+
+#content tfoot {
+	border-top: 5px solid #656B79;
+}
+
+#content td.total-heading {
+}
+
+
+/* END Line items table */
+
+
+/* Client area */
+
+.comment-meta span {
+	color: #656B79;
+}
+
+.kitchen .content-header {
+	padding-top: 20px;
+}
+.kitchen .side_border {
+	margin-bottom:30px;
+}
+
+.kitchen h1 {
+	padding-top: 20px;
+}
+
+.kitchen .side_border h1 {
+	padding-top: 0px;
+	padding-right: 0;
+	margin-bottom: 0;
+	text-align: right
+}
+#content h2 {
+	color: #656B79;
+}
+
+h2#payment-plan-header {
+	color: #656B79!important;
+	border-bottom:1px solid #ccc;
+}
+
+.kitchen div h4 {
+	border-bottom:5px solid #ccc;
+}
+
+.kitchen div h4.account_totals {
+	border-bottom:none;
+}
+
+div.project-holder {
+	/*border: 1px solid #ccc;*/
+}
+
+.project-holder {
+	margin-bottom: 3em;
+}
+
+.project-holder a, .items-desc-row a, .button-comments {
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	float: right;
+	display: inline-block;
+	margin: 0 0 0 10px;
+	color: #ffffff;
+	text-decoration: none;
+	background: #656b79;
+	border-radius: 5px;
+	line-height: 1;
+	padding: 4px 8px 5px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.account_totals .button-comments {
+	margin-top: 6px;
+}
+
+.kitchen-table .items-desc-row a {
+	float: none;
+	margin: 0;
+}
+
+/* END Client area */
+
+/* Payment form */
+.card-type {
+  width: 80px;
+  height: 56px;
+  background: url("/third_party/themes/flush/cards.png");
+  background-position: 0 291px;
+  background-repeat: no-repeat;
+  position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+.card-type.mastercard {
+  background-position: 0 0;
+}
+.card-type.visa {
+  background-position: 0 -115px;
+}
+.card-type.amex {
+  background-position: 0 -57px;
+}
+.card-type.discover {
+  background-position: 0 -174px;
+}
+
+.card-valid, #cc_name:valid {
+    /*background-color: #d0ffb0 !important;*/
+
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA3OTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MTIgNzkyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0MUFENDk7fQo8L3N0eWxlPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01NjIsMzk2YzAtMTQxLjQtMTE0LjYtMjU2LTI1Ni0yNTZTNTAsMjU0LjYsNTAsMzk2czExNC42LDI1NiwyNTYsMjU2UzU2Miw1MzcuNCw1NjIsMzk2TDU2MiwzOTZ6ICAgIE01MDEuNywyOTYuM2wtMjQxLDI0MWwwLDBsLTE3LjIsMTcuMkwxMTAuMyw0MjEuM2w1OC44LTU4LjhsNzQuNSw3NC41bDE5OS40LTE5OS40TDUwMS43LDI5Ni4zTDUwMS43LDI5Ni4zeiIvPjwvZz48L3N2Zz4=');
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 333px 5px;
+}
+/**************/
+
+#wrapper {width:630px;}
+
+input[type="text"] {
+width:100%;
+}
+
+.payment-card{
+  width: 60rem;
+}
+
+.payment-card__footer{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.bank-card{
+  position: relative;
+}
+
+@media screen and (min-width: 481px){
+
+  .bank-card{
+    height: 22rem;
+  }
+
+  .CC_side{
+    border-radius: 10px;
+    border: 1px solid transparent;
+    position: absolute;
+    width: 65%;
+  }
+
+  .CC_side_front{
+    background-color: #ececec;
+    padding: 5%;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.13);
+    border-color: #d8d8d8;
+
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  .CC_side_back{
+    background-color: #e0ddd7;
+    padding: 24.5% 5% 11%;
+    box-shadow: 0 0 2rem #f3f3f3;
+
+    text-align: right;
+    border-color: #dad9d6;
+
+    top: 16.5%;
+    right: 0;
+  }
+
+  .CC_side_back:before{
+    content: "";
+    width: 100%;
+    height: 25%;
+    background-color: #8e8b85;
+
+    position: absolute;
+    top: 14%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  .CC_side{
+    border: 1px solid #a29e97;
+    background-color: #f0f0ee;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .CC_side_front{
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+    padding-top: 5%;
+  }
+
+  .CC_side_back{
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    padding-bottom: 5%;
+  }
+}
+
+.CC_inner{
+  margin-bottom: 4%;
+}
+
+.CC_inner:last-child{
+  margin-bottom: 0;
+}
+
+.CC_label{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.CC_label_holder, .CC_label_number{
+  width: 100%;
+}
+
+@media screen and (min-width: 481px){
+
+  .CC_month, .CC_year{
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  .CC_month, .CC_year{
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 481px){
+
+  .CC_cvc{
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  .CC_cvc{
+    width: 100% !important;
+    margin-top: 4%;
+  }
+}
+
+.CC_hint{
+  position: absolute;
+  left: -9999px;
+}
+
+.CC_caption{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-left: 1%;
+  
+	text-shadow: 0px 0px 1px #636363;
+	color: #e0e0e0;
+	/*font: 80px 'LeagueGothicRegular';*/
+}
+
+.CC_field{
+  box-sizing: border-box;
+  border: 3px solid #d0d0ce !important;
+  width: 100%;
+
+  padding: 0.5rem !important;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.CC_field:focus{
+  outline: none;
+  border-color: #fdde60;
+}
+
+.CC_separator{
+  font-size: 3.2rem;
+  color: #c4c4c3;
+
+  margin-left: 3%;
+  margin-right: 3%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 480px){
+
+  .CC_separator{
+    display: none;
+  }
+}
+
+
+.payment-card__button{
+
+  background-color: #2a3a86;
+  transition: background-color .4s ease-out;
+
+  border-radius: 5px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  padding: 1rem 6.5rem;
+
+  font-size: 100%;
+  font-family: inherit;
+  color: #fff;
+}
+
+.payment-card__button:focus{
+  outline: none;
+  border-color: #fdde60;
+}
+
+.payment-card__button:hover, .payment-card__button:focus{
+  background-color: #8e8b85;
+}
+/* END Payment form */
+
+
+.kitchen .logo {
+    margin-left: -35px;
+}
+
+.kitchen .button-bar-text {
+    color: white;
+}
+
+.re-icon {
+	font-family: 'RedactorFont' !important;
+}
