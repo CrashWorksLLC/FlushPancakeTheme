@@ -1,0 +1,33 @@
+
+    /* Uncomment Certain Blocks to Enable!  */
+    /*Disable certain Menu Items*/
+    /*
+    .top-bar ul li a[href^="#timers"] {
+     display: none;
+    }
+    */
+    .top-bar, .top-bar ul, .top-bar li, .top-bar ul li ul li.divider, .top-bar ul li.name {
+    background: hsl(219, 71%, 31%) !important; /*Change first number to set theme color!*/
+  	border-bottom: 0;
+    }
+    #header{
+      background: hsl(211, 63%, 37%); /*Change first number to set theme color!*/
+      color: #fff;
+      margin: 0 0 20px 0;      
+    }
+
+    #header .ttl {
+        color: #fff;
+        border-bottom: none;
+    }
+    
+    .top-bar img.header-logo{
+      content: url('/LOGOWHITE.png');
+      margin-top: 0 !important;
+    }
+
+     .top-bar ul li ul li, .top-bar ul li ul li:last-child {border: 0;}
+
+    body{
+      background: url("/DollaDollaBackground.jpg");
+    }
